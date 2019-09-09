@@ -227,7 +227,7 @@ print(result)
 # 相比if语句、for循环和while循环，三目运算符还是存在一定的局限性，无法适应多变的需求开发
 
 
-
+result
 
 
 
