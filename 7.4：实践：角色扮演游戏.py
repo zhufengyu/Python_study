@@ -1,4 +1,3 @@
-
 '''
 狼人杀是目前比较流行的桌面游戏，主要由狼人、特殊村民和普通村民组成。狼人目标是杀掉所有村民，村民目标是找出狼人。
 根据游戏本质我们调整游戏的规则，游戏设计说明如下：
@@ -11,20 +10,26 @@
 '''
 
 import random
+
 '''自定义异常类'''
+
+
 class MuchError(Exception):
     pass
+
+
 class Victory(Exception):
     pass
 
+
 '''定义玩家与角色'''
-player = ['小刚','老刚','大刚','刚老铁']
-role = ['女巫','猎人','狼人','村民','守卫','长老','预言家','白狼王']
+player = ['小刚', '老刚', '大刚', '刚老铁']
+role = ['女巫', '猎人', '狼人', '村民', '守卫', '长老', '预言家', '白狼王']
 
 '''将玩家与角色的顺序打乱并重新匹配'''
-player = random.sample(player,len(player))
-role = random.sample(role,len(player))
-print('游戏中的身份有：' + '、'.join(role))
+player = random.sample(player, len(player))
+role = random.sample(role, len(player))
+# print('游戏中的身份有：' + '、'.join(role))
 matching = {}
 for t in range(len(player)):
     matching[player[t]] = role[t]
